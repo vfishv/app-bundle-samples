@@ -23,7 +23,7 @@ buildscript {
             'minSdk'            : 21,
             'targetSdk'         : 28,
             'kotlin'            : '1.9.10',
-            'playcore'          : '1.8.3',
+            'playcore'          : '1.10.3',
             'appcompat'         : '1.6.1',
             'espresso'          : '3.2.0',
             'extJunit'          : '1.1.1',
