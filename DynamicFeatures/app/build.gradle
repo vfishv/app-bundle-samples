@@ -22,6 +22,12 @@ android {
     compileSdkVersion versions.compileSdk
     namespace "com.google.android.samples.dynamicfeatures"
 
+    buildFeatures {
+        buildConfig = true
+        dataBinding = false
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId names.applicationId
         minSdkVersion versions.minSdk
@@ -42,8 +48,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = '1.8'
-        targetCompatibility = '1.8'
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     dynamicFeatures = [':features:kotlin',

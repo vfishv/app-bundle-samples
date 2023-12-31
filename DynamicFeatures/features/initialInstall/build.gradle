@@ -22,6 +22,11 @@ android {
     compileSdkVersion versions.compileSdk
     namespace "com.google.android.samples.dynamicfeatures.initialinstall"
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
     defaultConfig {
         minSdkVersion versions.minSdk
         targetSdkVersion versions.targetSdk
