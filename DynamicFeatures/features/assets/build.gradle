@@ -19,6 +19,8 @@ apply plugin: 'com.android.dynamic-feature'
 android {
 
     compileSdkVersion versions.compileSdk
+    namespace "com.google.android.samples.dynamicfeatures.ondemand.assets"
+
 
     defaultConfig {
         minSdkVersion versions.minSdk
