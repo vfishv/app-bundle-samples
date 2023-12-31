@@ -20,6 +20,7 @@ apply plugin: 'kotlin-android'
 android {
 
     compileSdkVersion versions.compileSdk
+    ndkVersion "25.2.9519653"
     namespace "com.google.android.samples.dynamicfeatures.ondemand.ccode"
 
     defaultConfig {
