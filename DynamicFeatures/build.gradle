@@ -22,7 +22,7 @@ buildscript {
             'compileSdk'        : 34,
             'minSdk'            : 21,
             'targetSdk'         : 28,
-            'kotlin'            : '1.9.10',
+            'kotlin'            : '1.9.22',
             'playcore'          : '1.10.3',
             'appcompat'         : '1.6.1',
             'espresso'          : '3.5.1',
@@ -38,11 +38,14 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        jcenter()
+        //jcenter()
+        maven {
+            url 'https://pkgs.dev.azure.com/MicrosoftDeviceSDK/DuoSDK-Public/_packaging/Duo-SDK-Feed/maven/v1'
+        }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.0'
+        classpath 'com.android.tools.build:gradle:8.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -55,6 +58,9 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
+        //jcenter()
+        maven {
+            url 'https://pkgs.dev.azure.com/MicrosoftDeviceSDK/DuoSDK-Public/_packaging/Duo-SDK-Feed/maven/v1'
+        }
     }
 }

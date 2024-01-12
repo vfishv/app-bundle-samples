@@ -26,6 +26,10 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
     defaultConfig {
 
         minSdkVersion versions.minSdk
@@ -38,6 +42,15 @@ android {
 dependencies {
 
     implementation project(':app')
+
+    // https://github.com/mesadhan/google-drive-app
+    implementation("com.google.http-client:google-http-client-gson:1.42.1")
+    implementation("com.google.api-client:google-api-client-android:2.0.1") {
+        exclude group: "org.apache.httpcomponents"
+    }
+    implementation("com.google.apis:google-api-services-drive:v3-rev20220815-2.0.0") {
+        exclude group: "org.apache.httpcomponents"
+    }
 
     androidTestImplementation "androidx.test.espresso:espresso-contrib:${versions.espresso}"
     androidTestImplementation "androidx.test:rules:${versions.testRules}"

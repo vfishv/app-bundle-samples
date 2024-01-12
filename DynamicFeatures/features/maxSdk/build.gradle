@@ -40,6 +40,11 @@ dependencies {
 
     implementation project(':app')
 
+
+    implementation("com.dropbox.core:dropbox-android-sdk:6.0.0") {
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-core'
+    }
+
     androidTestImplementation "androidx.test.espresso:espresso-contrib:${versions.espresso}"
     androidTestImplementation "androidx.test:rules:${versions.testRules}"
     androidTestImplementation "androidx.test.ext:junit:${versions.extJunit}"
